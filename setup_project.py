@@ -23,6 +23,7 @@ python-jose==3.3.0
 passlib==1.7.4
 bcrypt==4.1.2
 alembic==1.13.1
+gunicorn
 """
 
         self.files: Dict[str, str] = {

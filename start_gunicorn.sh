@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Crear directorio para logs si no existe
 mkdir -p logs
 
 # Ejecutar Gunicorn como daemon
