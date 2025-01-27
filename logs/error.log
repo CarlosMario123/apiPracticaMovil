@@ -1,0 +1,41 @@
+[2025-01-26 23:04:40 -0600] [18350] [INFO] Starting gunicorn 23.0.0
+[2025-01-26 23:04:40 -0600] [18350] [INFO] Listening at: http://0.0.0.0:8000 (18350)
+[2025-01-26 23:04:40 -0600] [18350] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-01-26 23:04:40 -0600] [18352] [INFO] Booting worker with pid: 18352
+[2025-01-26 23:04:40 -0600] [18353] [INFO] Booting worker with pid: 18353
+[2025-01-26 23:04:40 -0600] [18354] [INFO] Booting worker with pid: 18354
+[2025-01-26 23:04:40 -0600] [18355] [INFO] Booting worker with pid: 18355
+[2025-01-26 23:04:41 -0600] [18352] [INFO] Started server process [18352]
+[2025-01-26 23:04:41 -0600] [18352] [INFO] Waiting for application startup.
+[2025-01-26 23:04:41 -0600] [18352] [INFO] Application startup complete.
+[2025-01-26 23:04:41 -0600] [18353] [INFO] Started server process [18353]
+[2025-01-26 23:04:41 -0600] [18353] [INFO] Waiting for application startup.
+[2025-01-26 23:04:41 -0600] [18353] [INFO] Application startup complete.
+[2025-01-26 23:04:41 -0600] [18354] [INFO] Started server process [18354]
+[2025-01-26 23:04:41 -0600] [18354] [INFO] Waiting for application startup.
+[2025-01-26 23:04:41 -0600] [18354] [INFO] Application startup complete.
+[2025-01-26 23:04:41 -0600] [18355] [INFO] Started server process [18355]
+[2025-01-26 23:04:41 -0600] [18355] [INFO] Waiting for application startup.
+[2025-01-26 23:04:41 -0600] [18355] [INFO] Application startup complete.
+[2025-01-26 23:05:05 -0600] [18350] [INFO] Handling signal: term
+[2025-01-26 23:05:05 -0600] [18355] [INFO] Shutting down
+[2025-01-26 23:05:05 -0600] [18352] [INFO] Shutting down
+[2025-01-26 23:05:05 -0600] [18353] [INFO] Shutting down
+[2025-01-26 23:05:05 -0600] [18354] [INFO] Shutting down
+[2025-01-26 23:05:05 -0600] [18355] [INFO] Waiting for application shutdown.
+[2025-01-26 23:05:05 -0600] [18355] [INFO] Application shutdown complete.
+[2025-01-26 23:05:05 -0600] [18355] [INFO] Finished server process [18355]
+[2025-01-26 23:05:05 -0600] [18355] [INFO] Worker exiting (pid: 18355)
+[2025-01-26 23:05:05 -0600] [18352] [INFO] Waiting for application shutdown.
+[2025-01-26 23:05:05 -0600] [18352] [INFO] Application shutdown complete.
+[2025-01-26 23:05:05 -0600] [18352] [INFO] Finished server process [18352]
+[2025-01-26 23:05:05 -0600] [18352] [INFO] Worker exiting (pid: 18352)
+[2025-01-26 23:05:05 -0600] [18353] [INFO] Waiting for application shutdown.
+[2025-01-26 23:05:05 -0600] [18353] [INFO] Application shutdown complete.
+[2025-01-26 23:05:05 -0600] [18353] [INFO] Finished server process [18353]
+[2025-01-26 23:05:05 -0600] [18353] [INFO] Worker exiting (pid: 18353)
+[2025-01-26 23:05:05 -0600] [18354] [INFO] Waiting for application shutdown.
+[2025-01-26 23:05:05 -0600] [18354] [INFO] Application shutdown complete.
+[2025-01-26 23:05:05 -0600] [18354] [INFO] Finished server process [18354]
+[2025-01-26 23:05:05 -0600] [18354] [INFO] Worker exiting (pid: 18354)
+[2025-01-26 23:05:05 -0600] [18350] [INFO] Shutting down: Master
