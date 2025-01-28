@@ -11,7 +11,7 @@ def create_usuario(usuario: schemas.UsuarioCreate, db: Session = Depends(get_db)
     usuario_service = service.UsuarioService(db)
     return usuario_service.create(usuario)
 
-@router.get("/{usuario_id}", response_model=schemas.Usuario)
-def get_usuario(usuario_id: int, db: Session = Depends(get_db)):
+@router.get("/{usuario_email}", response_model=schemas.Usuario)
+def get_usuario(usuario_email: str, db: Session = Depends(get_db)):
     usuario_service = service.UsuarioService(db)
-    return usuario_service.get_by_id(usuario_id)
+    return usuario_service.get_by_email(usuario_email)
