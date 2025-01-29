@@ -16,3 +16,12 @@ class Usuario(UsuarioBase):
 
     class Config:
         from_attributes = True
+
+class LoginRequest(BaseModel):
+    email: EmailStr
+    password: str
+
+class LoginResponse(BaseModel):
+    email: str
+    nombre: str
+    success: bool

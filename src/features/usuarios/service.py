@@ -3,6 +3,7 @@ from src.shared.exceptions import NotFoundError, BadRequestError
 from . import models, schemas
 from passlib.context import CryptContext
 from typing import Optional
+from fastapi import HTTPException, status
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -13,14 +14,13 @@ class UsuarioService:
     def create(self, usuario: schemas.UsuarioCreate) -> models.Usuario:
         if self.get_by_email(usuario.email):
             raise BadRequestError("Email ya registrado")
-
+        
         hashed_password = pwd_context.hash(usuario.password)
         db_usuario = models.Usuario(
             nombre=usuario.nombre,
             email=usuario.email,
             password=hashed_password
         )
-        
         self.db.add(db_usuario)
         self.db.commit()
         self.db.refresh(db_usuario)
@@ -40,3 +40,25 @@ class UsuarioService:
             models.Usuario.email == email,
             models.Usuario.activo == True
         ).first()
+
+    def login(self, email: str, password: str) -> dict:
+        usuario = self.get_by_email(email)
+        
+        if not usuario:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Credenciales incorrectas"
+            )
+            
+        if not pwd_context.verify(password, usuario.password):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Credenciales incorrectas"
+            )
+            
+        return {
+            "id": usuario.id,
+            "email": usuario.email,
+            "nombre": usuario.nombre,
+            "success": True
+        }
